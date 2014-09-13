@@ -15,7 +15,7 @@
  + * (jmix:question)
 
 [jnt:rule] > jnt:content, jmix:editorialContent orderable
- - question_rule (weakreference, choicelist[nodes='/sites//*;jmix:question'])
+ - question_rule (weakreference, choicelist[questionChoiceList])
  - type (string, choicelist) < 'equals','above'
  - value (string)
  - action (string,choicelist) < '10','20','30'

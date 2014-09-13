@@ -7,5 +7,10 @@
 	    <property name="name" value="selector"/>
 	    <property name="jcrTemplate" ref="jcrTemplate"/>
 	</bean>
+	
+	<bean id="dogChoiceList" class="com.jahia.huault.selector.QuestionChoiceList" >
+    	<property name="key" value="questionChoiceList"/>
+    </bean>
+    
 </beans>
 
