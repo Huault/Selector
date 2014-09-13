@@ -1,0 +1,22 @@
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+
+[jmix:question] mixin
+ - question (string) mandatory
+
+[jnt:string_question] > jnt:content, jmix:question
+
+[jmix:selectable] mixin
+ extends = jnt:content
+ - selectors (weakreference, choicelist[nodes='/sites//*;jnt:selector']) multiple
+ + * (jnt:rule)
+
+[jnt:selector] > jnt:content, jmix:droppableContent, jmix:editorialContent orderable
+ + * (jmix:question)
+
+[jnt:rule] > jnt:content, jmix:editorialContent orderable
+ - question_rule (weakreference, choicelist[nodes='/sites//*;jmix:question'])
+ - type (string, choicelist) < 'equals','above'
+ - value (string)
+ - action (string,choicelist) < '10','20','30'
+
